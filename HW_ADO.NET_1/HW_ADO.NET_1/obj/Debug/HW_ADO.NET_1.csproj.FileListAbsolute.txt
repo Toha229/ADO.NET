@@ -1,0 +1,7 @@
+E:\дз\ШАГ\HW_ADO.NET_1\HW_ADO.NET_1\bin\Debug\HW_ADO.NET_1.exe.config
+E:\дз\ШАГ\HW_ADO.NET_1\HW_ADO.NET_1\bin\Debug\HW_ADO.NET_1.exe
+E:\дз\ШАГ\HW_ADO.NET_1\HW_ADO.NET_1\bin\Debug\HW_ADO.NET_1.pdb
+E:\дз\ШАГ\HW_ADO.NET_1\HW_ADO.NET_1\obj\Debug\HW_ADO.NET_1.csprojAssemblyReference.cache
+E:\дз\ШАГ\HW_ADO.NET_1\HW_ADO.NET_1\obj\Debug\HW_ADO.NET_1.csproj.CoreCompileInputs.cache
+E:\дз\ШАГ\HW_ADO.NET_1\HW_ADO.NET_1\obj\Debug\HW_ADO.NET_1.exe
+E:\дз\ШАГ\HW_ADO.NET_1\HW_ADO.NET_1\obj\Debug\HW_ADO.NET_1.pdb
