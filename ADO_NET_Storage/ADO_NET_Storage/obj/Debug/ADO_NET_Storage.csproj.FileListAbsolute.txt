@@ -1,0 +1,7 @@
+E:\дз\ШАГ\!ADO.NET\ADO_NET_Storage\ADO_NET_Storage\bin\Debug\ADO_NET_Storage.exe.config
+E:\дз\ШАГ\!ADO.NET\ADO_NET_Storage\ADO_NET_Storage\bin\Debug\ADO_NET_Storage.exe
+E:\дз\ШАГ\!ADO.NET\ADO_NET_Storage\ADO_NET_Storage\bin\Debug\ADO_NET_Storage.pdb
+E:\дз\ШАГ\!ADO.NET\ADO_NET_Storage\ADO_NET_Storage\obj\Debug\ADO_NET_Storage.csproj.AssemblyReference.cache
+E:\дз\ШАГ\!ADO.NET\ADO_NET_Storage\ADO_NET_Storage\obj\Debug\ADO_NET_Storage.csproj.CoreCompileInputs.cache
+E:\дз\ШАГ\!ADO.NET\ADO_NET_Storage\ADO_NET_Storage\obj\Debug\ADO_NET_Storage.exe
+E:\дз\ШАГ\!ADO.NET\ADO_NET_Storage\ADO_NET_Storage\obj\Debug\ADO_NET_Storage.pdb

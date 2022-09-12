@@ -1,0 +1,12 @@
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\bin\Debug\netcoreapp3.1\ClassLibraryModelGame.deps.json
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\bin\Debug\netcoreapp3.1\ClassLibraryModelGame.dll
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\bin\Debug\netcoreapp3.1\ClassLibraryModelGame.pdb
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\obj\Debug\netcoreapp3.1\ClassLibraryModelGame.GeneratedMSBuildEditorConfig.editorconfig
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\obj\Debug\netcoreapp3.1\ClassLibraryModelGame.AssemblyInfoInputs.cache
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\obj\Debug\netcoreapp3.1\ClassLibraryModelGame.AssemblyInfo.cs
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\obj\Debug\netcoreapp3.1\ClassLibraryModelGame.csproj.CoreCompileInputs.cache
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\obj\Debug\netcoreapp3.1\ClassLibraryModelGame.dll
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\obj\Debug\netcoreapp3.1\ClassLibraryModelGame.pdb
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\bin\Debug\netcoreapp3.1\ClassLibraryModelGame.runtimeconfig.json
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\bin\Debug\netcoreapp3.1\ClassLibraryModelGame.runtimeconfig.dev.json
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryModelGame\obj\Debug\netcoreapp3.1\ClassLibraryModelGame.genruntimeconfig.cache

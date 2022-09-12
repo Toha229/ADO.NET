@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShopTeaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameCountry" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSort" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="TypeTeaId" Type="int" />
+    <Property Name="DescriptionInfo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumberGrams" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypesTea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeTea" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DescriptionInfo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Tea__CountryId__33D4B598">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Tea" Type="Self.Tea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tea">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tea__TypeTeaId__34C8D9D1">
+    <End Role="TypesTea" Type="Self.TypesTea" Multiplicity="0..1" />
+    <End Role="Tea" Type="Self.Tea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesTea">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tea">
+        <PropertyRef Name="TypeTeaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ShopTeaModelStoreContainer">
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tea" EntityType="Self.Tea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypesTea" EntityType="Self.TypesTea" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Tea__CountryId__33D4B598" Association="Self.FK__Tea__CountryId__33D4B598">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Tea" EntitySet="Tea" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tea__TypeTeaId__34C8D9D1" Association="Self.FK__Tea__TypeTeaId__34C8D9D1">
+      <End Role="TypesTea" EntitySet="TypesTea" />
+      <End Role="Tea" EntitySet="Tea" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

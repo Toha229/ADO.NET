@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ShopTeaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameCountry" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameSort" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="TypeTeaId" Type="int" />
+          <Property Name="DescriptionInfo" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="NumberGrams" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TypesTea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeTea" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DescriptionInfo" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Tea__CountryId__33D4B598">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="Tea" Type="Self.Tea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tea">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tea__TypeTeaId__34C8D9D1">
+          <End Role="TypesTea" Type="Self.TypesTea" Multiplicity="0..1" />
+          <End Role="Tea" Type="Self.Tea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypesTea">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tea">
+              <PropertyRef Name="TypeTeaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ShopTeaModelStoreContainer">
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tea" EntityType="Self.Tea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypesTea" EntityType="Self.TypesTea" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Tea__CountryId__33D4B598" Association="Self.FK__Tea__CountryId__33D4B598">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Tea" EntitySet="Tea" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tea__TypeTeaId__34C8D9D1" Association="Self.FK__Tea__TypeTeaId__34C8D9D1">
+            <End Role="TypesTea" EntitySet="TypesTea" />
+            <End Role="Tea" EntitySet="Tea" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ShopTeaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameCountry" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tea" Relationship="Self.FK__Tea__CountryId__33D4B598" FromRole="Country" ToRole="Tea" />
+        </EntityType>
+        <EntityType Name="Tea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSort" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="TypeTeaId" Type="Int32" />
+          <Property Name="DescriptionInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberGrams" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="Country" Relationship="Self.FK__Tea__CountryId__33D4B598" FromRole="Tea" ToRole="Country" />
+          <NavigationProperty Name="TypesTea" Relationship="Self.FK__Tea__TypeTeaId__34C8D9D1" FromRole="Tea" ToRole="TypesTea" />
+        </EntityType>
+        <EntityType Name="TypesTea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeTea" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DescriptionInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tea" Relationship="Self.FK__Tea__TypeTeaId__34C8D9D1" FromRole="TypesTea" ToRole="Tea" />
+        </EntityType>
+        <Association Name="FK__Tea__CountryId__33D4B598">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="Tea" Type="Self.Tea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tea">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tea__TypeTeaId__34C8D9D1">
+          <End Role="TypesTea" Type="Self.TypesTea" Multiplicity="0..1" />
+          <End Role="Tea" Type="Self.Tea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypesTea">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tea">
+              <PropertyRef Name="TypeTeaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ShopTeaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Country" EntityType="Self.Country" />
+          <EntitySet Name="Tea" EntityType="Self.Tea" />
+          <EntitySet Name="TypesTea" EntityType="Self.TypesTea" />
+          <AssociationSet Name="FK__Tea__CountryId__33D4B598" Association="Self.FK__Tea__CountryId__33D4B598">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Tea" EntitySet="Tea" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tea__TypeTeaId__34C8D9D1" Association="Self.FK__Tea__TypeTeaId__34C8D9D1">
+            <End Role="TypesTea" EntitySet="TypesTea" />
+            <End Role="Tea" EntitySet="Tea" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ShopTeaModelStoreContainer" CdmEntityContainer="ShopTeaEntities">
+          <EntitySetMapping Name="Country">
+            <EntityTypeMapping TypeName="ShopTeaModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NameCountry" ColumnName="NameCountry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tea">
+            <EntityTypeMapping TypeName="ShopTeaModel.Tea">
+              <MappingFragment StoreEntitySet="Tea">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NameSort" ColumnName="NameSort" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="TypeTeaId" ColumnName="TypeTeaId" />
+                <ScalarProperty Name="DescriptionInfo" ColumnName="DescriptionInfo" />
+                <ScalarProperty Name="NumberGrams" ColumnName="NumberGrams" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypesTea">
+            <EntityTypeMapping TypeName="ShopTeaModel.TypesTea">
+              <MappingFragment StoreEntitySet="TypesTea">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TypeTea" ColumnName="TypeTea" />
+                <ScalarProperty Name="DescriptionInfo" ColumnName="DescriptionInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

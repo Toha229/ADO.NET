@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShopTeaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameCountry" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Tea" Relationship="Self.FK__Tea__CountryId__33D4B598" FromRole="Country" ToRole="Tea" />
+  </EntityType>
+  <EntityType Name="Tea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSort" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="TypeTeaId" Type="Int32" />
+    <Property Name="DescriptionInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NumberGrams" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__Tea__CountryId__33D4B598" FromRole="Tea" ToRole="Country" />
+    <NavigationProperty Name="TypesTea" Relationship="Self.FK__Tea__TypeTeaId__34C8D9D1" FromRole="Tea" ToRole="TypesTea" />
+  </EntityType>
+  <EntityType Name="TypesTea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeTea" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DescriptionInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Tea" Relationship="Self.FK__Tea__TypeTeaId__34C8D9D1" FromRole="TypesTea" ToRole="Tea" />
+  </EntityType>
+  <Association Name="FK__Tea__CountryId__33D4B598">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Tea" Type="Self.Tea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tea">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tea__TypeTeaId__34C8D9D1">
+    <End Role="TypesTea" Type="Self.TypesTea" Multiplicity="0..1" />
+    <End Role="Tea" Type="Self.Tea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypesTea">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tea">
+        <PropertyRef Name="TypeTeaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ShopTeaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Country" EntityType="Self.Country" />
+    <EntitySet Name="Tea" EntityType="Self.Tea" />
+    <EntitySet Name="TypesTea" EntityType="Self.TypesTea" />
+    <AssociationSet Name="FK__Tea__CountryId__33D4B598" Association="Self.FK__Tea__CountryId__33D4B598">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Tea" EntitySet="Tea" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tea__TypeTeaId__34C8D9D1" Association="Self.FK__Tea__TypeTeaId__34C8D9D1">
+      <End Role="TypesTea" EntitySet="TypesTea" />
+      <End Role="Tea" EntitySet="Tea" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

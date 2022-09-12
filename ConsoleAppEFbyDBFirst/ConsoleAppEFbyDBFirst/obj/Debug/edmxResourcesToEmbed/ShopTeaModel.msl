@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShopTeaModelStoreContainer" CdmEntityContainer="ShopTeaEntities">
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="ShopTeaModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NameCountry" ColumnName="NameCountry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tea">
+      <EntityTypeMapping TypeName="ShopTeaModel.Tea">
+        <MappingFragment StoreEntitySet="Tea">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NameSort" ColumnName="NameSort" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="TypeTeaId" ColumnName="TypeTeaId" />
+          <ScalarProperty Name="DescriptionInfo" ColumnName="DescriptionInfo" />
+          <ScalarProperty Name="NumberGrams" ColumnName="NumberGrams" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypesTea">
+      <EntityTypeMapping TypeName="ShopTeaModel.TypesTea">
+        <MappingFragment StoreEntitySet="TypesTea">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeTea" ColumnName="TypeTea" />
+          <ScalarProperty Name="DescriptionInfo" ColumnName="DescriptionInfo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

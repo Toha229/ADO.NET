@@ -1,0 +1,16 @@
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\bin\Debug\netcoreapp3.1\ClassLibraryDBContext.deps.json
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\bin\Debug\netcoreapp3.1\ClassLibraryDBContext.runtimeconfig.json
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\bin\Debug\netcoreapp3.1\ClassLibraryDBContext.runtimeconfig.dev.json
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\bin\Debug\netcoreapp3.1\ClassLibraryDBContext.dll
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\bin\Debug\netcoreapp3.1\ClassLibraryDBContext.pdb
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\bin\Debug\netcoreapp3.1\ClassLibraryModelGame.dll
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\bin\Debug\netcoreapp3.1\ClassLibraryModelGame.pdb
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.csproj.AssemblyReference.cache
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.GeneratedMSBuildEditorConfig.editorconfig
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.AssemblyInfoInputs.cache
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.AssemblyInfo.cs
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.csproj.CoreCompileInputs.cache
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.csproj.CopyComplete
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.dll
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.pdb
+E:\дз\ШАГ\!ADO.NET\PractADONET\ClassLibraryDBContext\obj\Debug\netcoreapp3.1\ClassLibraryDBContext.genruntimeconfig.cache
